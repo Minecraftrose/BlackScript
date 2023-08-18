@@ -4,50 +4,59 @@
   <title>BlackScript By Calle</title>
   <link rel="shortcut icon" type="image" href="BlackScript-image.png">
   <style>
-    body {
+    /* Reset some default styles */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
     }
 
     .header {
       background-color: black;
       color: white;
       text-align: center;
-      padding: 5px;
+      padding: 10px;
     }
 
     .nav {
+      display: flex;
       background-color: black;
       color: white;
-      overflow: hidden;
     }
 
-    .nav .main {
-      float: left;
-      width: calc(100% - 180px); /* Adjust as needed */
+    .main {
+      flex: 1;
       padding: 20px;
     }
 
-    .nav .sidebar {
-      float: left;
-      width: 180px;
+    .sidebar {
+      width: 300px;
       padding: 20px;
-      height: 100vh; /* Adjust as needed */
+      background-color: #333;
+      color: white;
     }
 
-    .main textarea {
+    textarea {
       width: 100%;
-      max-width: 539px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
     }
 
     .button {
-      background-color: #000000; /* Black */
-      border: none;
+      display: inline-block;
+      background-color: #000000;
       color: white;
       padding: 10px 20px;
       text-align: center;
       text-decoration: none;
-      display: inline-block;
       font-size: 16px;
       border-radius: 5px;
       cursor: pointer;
@@ -55,11 +64,11 @@
     }
 
     #Save {
-      background-color: #FFA500; /* Orange */
+      background-color: #FFA500;
     }
 
     #downloadLink {
-      background-color: lime; /* Lime */
+      background-color: lime;
       display: none;
     }
 
@@ -67,16 +76,21 @@
       background-color: black;
       color: white;
       text-align: center;
-      padding: 5px;
+      padding: 10px;
       clear: both;
     }
 
     .img-container {
-      margin: 10px;
-      padding: 5px;
+      margin: 20px;
+      padding: 10px;
       border: 1px solid #0000ff;
-      float: right;
       text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
     }
   </style>
 </head>
