@@ -15,6 +15,9 @@
       font-family: Arial, sans-serif;
       background-color: #f0f0f0;
       margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
     }
 
     .header {
@@ -26,13 +29,14 @@
 
     .nav {
       display: flex;
-      background-color: black;
-      color: white;
+      flex: 1;
     }
 
     .main {
       flex: 1;
       padding: 20px;
+      display: flex;
+      flex-direction: column;
     }
 
     .sidebar {
@@ -44,13 +48,21 @@
 
     textarea {
       width: 100%;
+      height: 423px;
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
-      resize: vertical;
+      resize: none;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
     }
 
     .button {
+      flex: 1;
       display: inline-block;
       background-color: #000000;
       color: white;
@@ -60,7 +72,6 @@
       font-size: 16px;
       border-radius: 5px;
       cursor: pointer;
-      margin-top: 10px;
     }
 
     #Save {
@@ -77,7 +88,6 @@
       color: white;
       text-align: center;
       padding: 10px;
-      clear: both;
     }
 
     .img-container {
@@ -101,10 +111,11 @@
 <div class="nav">
   <div class="main">
     <form>
-      <textarea id="myText" rows="10" cols="50"></textarea>
-      <br>
-      <button class="button" id="Save" type="button" onclick="saveText()">Save Code</button>
-      <a class="button" id="downloadLink" href="#">Download Code</a>
+      <textarea id="myText"></textarea>
+      <div class="button-container">
+        <button class="button" id="Save" type="button" onclick="saveText()">Save Code</button>
+        <a class="button" id="downloadLink" href="#">Download Code</a>
+      </div>
     </form>
     <div class="img-container">
       <img src="BlackScript-image.png" alt="Example Image" width="300" height="auto">
@@ -118,7 +129,7 @@
   </div>
 </div>
 <div class="footer">
-  &copy; 2023 BlackScript By Calle
+  &copy; 2023 BlackScript
 </div>
 <script>
   function saveText() {
