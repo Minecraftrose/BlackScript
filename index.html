@@ -2,101 +2,12 @@
 <html>
 <head>
   <title>BlackScript By Calle</title>
-  <link rel="shortcut icon" type="image" href="BlackScript-image.png">
-  <style>
-    .header {
-      background-color: black;
-      color: white;
-      text-align: center;
-      padding: 5px;
-    }
-    .nav {
-      line-height: 30px;
-      background-color: black;
-      color: white;
-      height: 420px;
-      width: 180px;
-      float: left;
-      padding: 5px;
-    }
-    .main {
-      width: 950px;
-      float: left;
-      padding: 60px;
-    }
-    .fot {
-      background-color: black;
-      color: white;
-      clear: both;
-      text-align: center;
-      padding: 5px;
-    }
-    .img {
-      margin: 10px;
-      padding: 5px;
-      padding-left: 5px;
-      border: 1px solid #0000ff;
-      height: auto;
-      width: auto;
-      float: right;
-      text-align: center;
-    }
-    #downloadLink {
-      background-color: #000000; /* Black */
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    #Save {
-      background-color: #FFA500; /* Orange */
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    #Copy-code {
-      background-color: lime; /* Lime */
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-  </style>
-  
   <!-- Google AdSense Code -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2204566051524179" crossorigin="anonymous"></script>
-
 </head>
 <body>
-<div class="header">
-  <h1>BlackScript</h1>
-</div>
 <div class="nav">
   <div class="main">
-    <form>
-      <textarea id="myText" rows="10" cols="50" style="width: 539px;"></textarea>
-      <br>
-      <br>
-      <h2><button id="Save" type="button" onclick="saveText()">Save Code</button></h2>
-      <h2><a id="downloadLink" href="#" style="display:none">Download Code</a></h2>
-    </form>
-    
     <!-- Google AdSense Ad -->
     <ins class="adsbygoogle"
          style="display:block"
@@ -107,25 +18,6 @@
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-    
-    <img src="BlackScript-image.png" alt="Example Image" width="300" height="auto">
-    <script>
-      function saveText() {
-        var text = document.getElementById("myText").value;
-        var blob = new Blob([text], {type: "text/plain"});
-        var url = URL.createObjectURL(blob);
-        var downloadLink = document.getElementById("downloadLink");
-        downloadLink.href = url;
-        downloadLink.download = "BlackScript-Website.html";
-        downloadLink.style.display = "block";
-      }
-    </script>
-    <div style="text-align:right;position:fixed;z-index:9999999;bottom:0;width:auto;right:1%;cursor:pointer;line-height:0;display:block!important">
-      <iframe width="500" height="300" src="https://www.youtube.com/embed/kUMe1FH4CHE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
-    </div>
-    <div style="text-align:right;position:fixed;z-index:9999999;bottom:0;width:auto;right:12%;cursor:pointer;line-height:40;display:block!important">
-      <img src="BlackScript-image.png" alt="Example Image" width="160" height="auto">
-    </div>
   </div>
 </div>
 </body>
