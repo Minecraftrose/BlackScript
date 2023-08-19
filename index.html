@@ -109,6 +109,12 @@
       outline: none; /* Remove outline for images and links */
     }
   </style>
+  <script>
+    // Inaktivera högerklick och kontextmeny
+    window.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    });
+  </script>
 </head>
 <body>
 <div class="header">
